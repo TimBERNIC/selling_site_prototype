@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../STYLE/hardware.css">
+    <title>Site Prototype</title>
+</head>
+<body>
+    <header>
+        <div id="entete">
+            <a href="../Index.html"><img src="../IMG/logo.png" id="brandLogo"></a>
+            <div id="inputBox">
+                <input type="text" id="searchInput">
+                <button id="inputBtn"><img src="https://api.iconify.design/ci:search-magnifying-glass.svg"></button>
+            </div>
+            <div id="langBox">
+                <img id="langImg" src="https://api.iconify.design/cif:fr.svg" alt="French">
+                <select id="language">
+                    <option value="Fr">Français</option>
+                    <option value="En">English</option>
+                    <option value="De">Deutsch</option>
+                </select>
+            </div>
+            <a id="account" href=""> <img src="https://api.iconify.design/mdi:account.svg
+                " alt="account" class="logo">Compte</a>
+                <button id="basketInput" ><img src="https://api.iconify.design/material-symbols:shopping-cart-outline.svg" alt="panier" class="logo"> Panier </button>
+        </div>
+        <div id="basketBox">
+            <table id="basketTable">
+            </table>
+            <div id="totalPriceBox">Prix du panier : </div>
+        </div>
+        <div id="type">
+            <a class="typeLink" href="./temp_Page.html">Consoles</a>
+            <a class="typeLink" href="./temp_Page.html">Jeux vidéo</a>
+            <a class="typeLink" href="./temp_Page.html">Ordinateurs</a>
+            <a class="typeLink" href="./temp_Page.html">Tablettes</a>
+            <a class="typeLink" href="./temp_Page.html">Matériel informatique</a>
+            <a class="typeLink" href="./temp_Page.html">Accessoires</a>
+        </div>    
+    </header>
+    <main>
+        <table id="hardwareTable">
+        </table>
+        <div id="rollback">
+            <a id="rollBackLink" href="#">Retour en haut de page</a>
+        </div>
+    </main>
+    <footer>
+        <div id="sponsor"></div>
+        <div id="conditions"> 
+            <p>© 1996-2025, Javazon.com Inc. ou ses affiliés</p>
+            <p>All rights reserved</p>
+        </div>
+    </footer>
+    
+</body>
+<script src="../JS/hardware.js"></script>
+
+</html>

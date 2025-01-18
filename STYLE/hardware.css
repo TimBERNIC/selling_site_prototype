@@ -1,0 +1,222 @@
+*{
+    margin: 0;
+    font-family:Arial, Helvetica, sans-serif
+}
+body{
+    background-color: rgb(236, 231, 231);
+}
+
+
+a{
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px
+
+}
+header{
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: rgb(195, 195, 195);
+    position:fixed;
+    z-index :1
+
+}
+
+#entete {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    gap: 0;
+}
+
+#entete > /*> = chaque enfant de */ * /* "*" renvoie a tout les éléments*/ {
+    flex: 1; /* Chaque élément enfant occupe une part égale */
+    text-align: center;
+}
+#type{
+    display: flex;
+    justify-content:space-around;
+    border: 2px solid transparent;
+    box-shadow: 0 0 25px black;
+    background-color: rgb(99, 97, 97);
+    border-radius: 20px;
+    
+    
+}
+
+#type > * {
+    flex: 1; 
+    text-align: center;
+}
+a:hover{
+    transition-duration: 0.3s;
+    color: whitesmoke;
+}
+#brandLogo{
+    width: 150px;
+    object-fit: cover;
+    height: 20px;
+}
+
+.logo{
+    width:15px
+}
+#account, #basketInput, #langBox {
+    border:2px solid transparent;
+    border-radius: 2px;
+    background-color: rgb(195, 195, 195);
+
+}
+#account:hover, #basketInput:hover {
+    border:2px solid rgba(0, 0, 0, 0.514);
+    transition-duration: 0.3s;
+}
+#langBox {display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#inputBtn {
+    border: none;
+    max-width: 350px ;
+}
+#inputBox {display: flex;
+    align-items: center;
+    
+}
+
+#type a{
+    color: whitesmoke;
+}
+
+#type a:hover{
+    transition-duration: 0.3s;
+    color: black;
+}
+main{
+    display: inline-block;
+    margin-top: 50px;
+}
+
+#hardwareTable{
+    table-layout: fixed ;
+    width: 100%;
+    margin-top: 50px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+
+}
+
+#hardwareTable img {
+    display: flex;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    max-height: 200px;
+    min-height: 200px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    
+}
+
+
+#basketBox {
+    background-color: brown;
+    margin-left: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    border-bottom-left-radius: 20px;
+    z-index: 2;
+    position:fixed;
+    width: 50%;
+    right: 100%;
+    transition: 1s;
+    
+}
+
+#basketBoxTransition {
+    transition: 1s;
+    bottom: 0%
+}
+
+
+#basketTable {
+    background-color: rgba(255, 228, 182, 0.789);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+}
+
+.removeFromBasketBtn {
+    font-size: 10px;
+    width: 10%;
+    border-radius: 10px;
+    background-color: rgb(217, 108, 24);
+    border: 2px solid transparent;
+        
+}
+#totalPriceBox {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    background-color: rgba(255, 228, 182, 0.789);
+    width: 100%;
+    color: black;
+    font-weight: bolder;
+    font-size:x-large;
+    border-bottom-left-radius: 20px;
+    border-top: solid black 2px;
+}
+#basketTable td {
+    font-size: small;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+    max-height: 15%;
+    flex-wrap: wrap;
+ 
+
+
+}
+#basketTable img {
+    display: flex;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    max-height: 50px;
+    min-height: 50px;
+    max-width: 50px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+}
+
+
+
+
+footer{
+    text-align:center
+}
+
+.addToBasketBtn{
+    margin-top: 75px;
+    width: 50%;
+    height: 50px;
+    border-radius: 20px;
+    background-color: rgb(217, 201, 24);
+    width: 30%;
+    border: 2px solid transparent;
+}
+button:hover{
+    border: 2px solid orange;
+    transition: 0.3s;
+}
+
