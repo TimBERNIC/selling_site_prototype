@@ -7,61 +7,60 @@ const newItem = {
 const itemsForSale = [
   {
     name: "GIGABYTE RTX 3060 ti 8go ",
-    image: '<img src="../IMG/img2.jpg">',
+    image: '<img src="../img/img2.jpg">',
     price: 329,
     btn: null,
   },
   {
     name: "CPU AMD R7 5800x3d",
-    image: '<img src="../IMG/img3.jpg">',
+    image: '<img src="../img/img3.jpg">',
     price: 179,
     btn: null,
   },
   {
     name: "GIGABYTE Carte mère B650 ",
-    image: '<img src="../IMG/sImg3.jpg">',
+    image: '<img src="../img/sImg3.jpg">',
     price: 169,
     btn: null,
   },
   {
     name: "HYPERX Ram 16Gb (8Gbx2) DDR4, 3000 CL16",
-    image: '<img src="../IMG/sImg1.jpg">',
+    image: '<img src="../img/sImg1.jpg">',
     price: 79,
     btn: null,
   },
   {
     name: "CORSAIR Ventirad NHS3000",
-    image: '<img src="../IMG/sImg2.jpg">',
+    image: '<img src="./img/sImg2.jpg">',
     price: 65,
     btn: null,
   },
   {
     name: "LEXAR SSD 1 To M.2 NVME 2280 PCIE Gen3<",
-    image: '<img src="../IMG/sImg4.jpg">',
+    image: '<img src="../img/sImg4.jpg">',
     price: 94,
     btn: null,
   },
   {
     name: "Seasonic PSU 750w ATX 3.0",
-    image: '<img src="../IMG/sImg5.jpg">',
+    image: '<img src="../img/sImg5.jpg">',
     price: 79,
     btn: null,
   },
   {
     name: "NZXT H7 Air flow",
-    image: '<img src="../IMG/sImg6.jpg">',
+    image: '<img src="../img/sImg6.jpg">',
     price: 149,
     btn: null,
   },
 ];
 
 const basket = [];
+// Récupération de la table
+const hardwareTable = document.getElementById("hardwareTable");
 
 // Mise a jour du la liste d'objet à Vendre
 itemsForSale.map((element, index) => {
-  // Récupération de la table
-  const hardwareTable = document.getElementById("hardwareTable");
-
   // Création de la ligne de tableau
   const newItemForSale = document.createElement("tr");
 
@@ -71,9 +70,9 @@ itemsForSale.map((element, index) => {
   newItemForSale.appendChild(newItemForSaleName);
 
   // Affichage de l'image
-  const newItemForSaleImg = document.createElement("td");
-  newItemForSaleImg.innerHTML = element.image;
-  newItemForSale.appendChild(newItemForSaleImg);
+  const newItemForSaleimg = document.createElement("td");
+  newItemForSaleimg.innerHTML = element.image;
+  newItemForSale.appendChild(newItemForSaleimg);
 
   // Affichage du Prix
   const newItemForSalePrice = document.createElement("td");
@@ -152,9 +151,14 @@ document.addEventListener("DOMContentLoaded", () => {
 const basketInput = document.getElementById("basketInput");
 const basketBox = document.getElementById("basketBox");
 basketInput.addEventListener("click", () => {
-  if (basketBox.id === "basketBox") {
-    basketBox.id = "basketBoxTransition";
-  } else {
-    basketBox.id = "basketBox";
-  }
+  // if (basketBox.id === "basketBox") {
+  //   basketBox.id = "basketBoxTransition";
+  // } else {
+  //   basketBox.id = "basketBox";
+  // }
+  //La meme chose en structure en ternaire
+  basketBox.id =
+    basketBox.id === "basketBox" /*vérification*/
+      ? "basketBoxTransition" /*Si oui*/
+      : "basketBox"; /* Si Non */
 });
